@@ -10,11 +10,11 @@ response = requests.get(requests_url)
 if response.status_code == 200: 
   data = response.json()
   weather = data['weather'][0]['description']
-  print('Looks like it is ', weather, 'today, fren' )
+  print('Looks like it is', weather, 'today, fren' )
   temperature = round((((data["main"]["temp"]-273.15) * 1.8) + 32), 1)
   print(temperature, 'degrees Fahrenheit')
-  humidity = data["main"]["humidity"]
-  print('The humidity is', str(humidity)+"%, bud")
+  humidity = data["main"]["humidity"] 
+  print('The humidity is', str(humidity)+'%, bud')
 
 
 else: 
